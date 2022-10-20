@@ -1,0 +1,30 @@
+body{
+    background-color: #1C1C1C;
+}
+.loader{
+    width: 3rem;
+    height: 3rem;
+    background-color: hotpink;
+    border-radius: 50%;
+    position: relative;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader:after{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+    border: solid 1px hotpink;
+
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    to{
+        transform: scale(3);
+        opacity: 0;
+    }
+}
