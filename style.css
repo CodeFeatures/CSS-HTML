@@ -1,0 +1,55 @@
+.icon{
+    display: inline-block;
+    font-size: 44px;
+    animation: float 5s ease-in-out
+    infinite;
+}
+.ri-facebook-circle-line{
+    animation-delay: 1s;
+}
+.ri-whatsapp-line{
+    animation-delay: 2s;
+} 
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+body{
+    background: #1C1C1C;
+}
+
+
+/*This is just imported icons all animation code above*/
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+.fa-instagram{
+    color: white;
+    background: #610B4B;
+}
+.fa-whatsapp{
+    color: white;
+    background: green;
+}
+.flex{
+    margin: 100px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+}
