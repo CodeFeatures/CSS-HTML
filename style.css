@@ -1,0 +1,47 @@
+/* body{
+    background: #1C1C1C;
+} */
+body{
+    background: #232328;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow: hidden;
+    color: white;
+}
+.text{
+    margin: -100px 0 0 0;
+}
+
+/* All animation code below */
+
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-weight: 200;
+    letter-spacing: 35px;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: focus 9s var(--i) ease-in-out infinite;
+    -webkit-box-reflect: below 0 linear-gradient(transparent 20%, rgba(255, 255, 255, 0.2));
+}
+@keyframes focus{
+    0%{
+        font-size: 256px;
+        filter: blur(16px);
+        letter-spacing: 64px;
+    }
+    20%, 30%{
+        font-size: 48px;
+        filter: blur(0px);
+        letter-spacing: 3px;
+        opacity: 1;
+    }
+    50%{
+        font-size: 0;
+        filter: blur(16px);
+        opacity: 0;
+    }
+}
