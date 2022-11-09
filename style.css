@@ -1,0 +1,58 @@
+/* body{
+    background: #1C1C1C;
+} */
+body{
+    background: #232328;
+    margin: 0;
+}
+
+/* All animation code below */
+.loader{
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 150px;
+    height: 150px;
+    border-left: 5px solid #ff006e;
+    border-radius: 50%;
+    animation: rightrotate 900ms linear infinite;
+}
+.loader::before, .loader::after{
+    content: '';
+    width: 120px;
+    height: 120px;
+    display: block;
+    position: absolute;
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+    border-radius: 50% ;
+    border-right:4px solid #ffbe0b ;
+    animation: leftrotate 900ms linear infinite;
+}
+.loader::after{
+    content: '';
+    width: 90px;
+    height: 90px;
+    top: calc(50% - 45px);
+    left: calc(50% - 45px);
+    border: 0;
+    border-left:3px solid blue ;
+    animation: none;
+}
+@keyframes leftrotate{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(720deg);
+    }
+}
+@keyframes rightrotate{
+    from {
+        transform: rotate(350deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+
